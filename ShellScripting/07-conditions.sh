@@ -2,7 +2,7 @@
 
 # Check if the bumber is greater than 10 or not
 
-NUMBER=$100
+NUMBER=$1
 
 if [ $NUMNER -gt 10 ]
 then 
