@@ -5,4 +5,4 @@
 
 DATE=$(date)
 
-echo "This script executed $DATE
+echo "This script is executed at timestamp: $DATE"
