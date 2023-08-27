@@ -10,9 +10,9 @@ VALIDATE() {
     #$1 --> it will the argument 1
     if [ $1 -ne 0 ]
     then 
-        echo "Installation... FAILURE"
+        echo "$2... FAILURE"
     else 
-        echo "Installation... success"
+        echo "$2... success"
     fi
 }
 
@@ -28,8 +28,8 @@ fi
 # It is our responsibility again to check installation success or not
 yum install mysql -y
 
-VALIDATE $?
+VALIDATE $? "Installing MySQL"
 
 yum install postfix -y
 
-VALIDATE $?
+VALIDATE $? "Installing postfix"
