@@ -2,7 +2,9 @@
 
 ## Our program goal is to install mqsql
 
-USERID=$(id -u)
+DATE=$(date +%F)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 # This function should validate the previous command and inform user it is success or failure
 VALIDATE() {
@@ -10,11 +12,13 @@ VALIDATE() {
     #$1 --> it will the argument 1
     if [ $1 -ne 0 ]
     then 
-        echo "$2... FAILURE"
+        echo "$2... FAILURE" 
     else 
         echo "$2... success"
     fi
 }
+USERID=$(id -u)
+
 
 if [ $USERID -ne 0 ]
 then 
@@ -26,10 +30,10 @@ then
 fi
 
 # It is our responsibility again to check installation success or not
-yum install mysql -y
+yum install mysql -y &>>$LOGFILE
 
 VALIDATE $? "Installing MySQL"
 
-yum install postfix -y
+yum install postfix -y &>>$LOGFILE
 
 VALIDATE $? "Installing postfix"
