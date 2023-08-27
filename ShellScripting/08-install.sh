@@ -12,4 +12,4 @@ then
 #   echo "INFO:: Your are root user"
 fi
 
-yum install nginx -y
+yum install httpd -y
