@@ -8,5 +8,5 @@ if [ $NUMNER -gt 10 ]
 then 
     echo "$NUMBER is greter then 10"
 else
-    echo "NUMBER is not greter then 10"
+    echo "$NUMBER is not greter then 10"
 fi
