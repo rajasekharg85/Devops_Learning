@@ -13,4 +13,4 @@ then
 #   echo "INFO:: Your are root user"
 fi
 
-yum install mysql -y
+yum install mysqllll -y
