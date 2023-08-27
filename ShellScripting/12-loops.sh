@@ -5,4 +5,3 @@ for i in $@
 do 
     you install $i -y
 done
-fdf
