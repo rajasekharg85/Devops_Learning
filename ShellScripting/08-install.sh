@@ -12,4 +12,4 @@ then
 #   echo "INFO:: Your are root user"
 fi
 
-yum install httpd -y
+yum install mysql -y
