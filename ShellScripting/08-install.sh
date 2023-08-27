@@ -13,4 +13,11 @@ then
 #   echo "INFO:: Your are root user"
 fi
 
+# It is our responsibility again to check installation success or not
 yum install mysqllll -y
+if [ if $? -ne 0 ]
+then 
+    echo "Installation of mysql is error"
+else 
+    echo "Installation of mysql is success"
+fi
