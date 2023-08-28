@@ -14,4 +14,4 @@ do
     echo "Deleting $line" &> $LOGFILE
     rm -rf $line
     ## We write our statement here
-done < $FILES_TO_DELETE
+done <<< $FILES_TO_DELETE
