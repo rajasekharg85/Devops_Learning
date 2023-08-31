@@ -28,7 +28,7 @@ else
 fi
 }
 
-cp mango.repo /etc/yum.repo.d/mango.repo &>> $LOGFILE
+cp /root/Devops_Learning/roboshop-shell/mango.repo /etc/yum.repo.d/mango.repo &>> $LOGFILE
 
 VALIDATE $? "Copied MangoDB  repo into yum.repo.d"
 
