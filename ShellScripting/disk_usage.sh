@@ -25,9 +25,9 @@ do
     ## This command will give us partition
     partition=$(echo $line | awk '{print $1}')
     ## Now you need to check whether it is more then threshhold or not
-    if [$usage -gt $DISK_USAGE_THRESHOLD];
+    if [ $usage -gt $DISK_USAGE_THRESHOLD ];
     then
-        message+="HIGH DISK USAGE on $partition: $usage"
+        message+="HIGH DISK USAGE on $partition: $usage\n"
     fi
 done <<< $DISK_USAGE
 
