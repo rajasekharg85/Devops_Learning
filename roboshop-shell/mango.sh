@@ -44,7 +44,7 @@ systemctl start mongod
 
 VALIDATE $? "Starting MangoDB"
 
-sed -i 's/127.0.0.1/0.0.0.0/' /etc/mangod.conf
+sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 
 VALIDATE $> "Edited MangoDB conf"
 
