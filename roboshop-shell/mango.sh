@@ -36,11 +36,11 @@ yum install mongodb-org -y
             
 VALIDATE $? "Installation of MangoDB"
 
-systemctl enable mangod
+systemctl enable mongod
 
 VALIDATE $? "Enabling MangoDB"
 
-systemctl start mangod
+systemctl start mongod
 
 VALIDATE $? "Starting MangoDB"
 
@@ -48,6 +48,6 @@ sed -i 's/127.0.0.1/0.0.0.0/' /etc/mangod.conf
 
 VALIDATE $> "Edited MangoDB conf"
 
-systemctl start mangod
+systemctl restart mongod
 
 VALIDATE $? "Restarting MangoDB"
