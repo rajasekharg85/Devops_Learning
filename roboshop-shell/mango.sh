@@ -32,8 +32,8 @@ cp /root/Devops_Learning/roboshop-shell/mango.repo /etc/yum.repos.d/mango.repo &
 
 VALIDATE $? "Copied MangoDB  repo into yum.repo.d"
 
-yum install mangodb-org -y
-
+yum install mongodb-org -y
+            
 VALIDATE $? "Installation of MangoDB"
 
 systemctl enable mangodb
