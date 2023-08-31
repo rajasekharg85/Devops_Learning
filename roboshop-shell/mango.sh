@@ -31,22 +31,22 @@ cp /root/Devops_Learning/roboshop-shell/mango.repo /etc/yum.repos.d/mango.repo &
 
 VALIDATE $? "Copied MangoDB  repo into yum.repo.d"
 
-yum install mongodb-org -y
+yum install mongodb-org -y &>> $LOGFILE
             
 VALIDATE $? "Installation of MangoDB"
 
-systemctl enable mongod
+systemctl enable mongod &>> $LOGFILE
 
 VALIDATE $? "Enabling MangoDB"
 
-systemctl start mongod
+systemctl start mongod &>> $LOGFILE
 
 VALIDATE $? "Starting MangoDB"
 
-sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
+sed -i 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf &>> $LOGFILE
 
 VALIDATE $? "Edited MangoDB conf"
 
-systemctl restart mongod
+systemctl restart mongod &>> $LOGFILE
 
 VALIDATE $? "Restarting MangoDB"
