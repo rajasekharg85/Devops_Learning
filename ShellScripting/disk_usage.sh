@@ -19,5 +19,6 @@ DISK_USAGE_THRESHOLD=1
 
 #IFS means internal field separator is space
 while IFS= read line
+do
     echo "ouput: $line"
-done
+done <<< $DISK_USAGE
