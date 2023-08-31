@@ -18,13 +18,13 @@ then
 fi
 
 VALIDATE(){
-if [ $1 -ne 0 ];
-then
-    echo -e "$2 ... $R FAILURE $N"
-    exit 1
-else
-    echo -e "Installing $2 ... $G SUCCESS $N"
-fi
+    if [ $1 -ne 0 ];
+    then
+        echo -e "$2 ... $R FAILURE $N"
+        exit 1
+    else
+        echo -e "Installing $2 ... $G SUCCESS $N"
+    fi
 }
 
 cp /root/Devops_Learning/roboshop-shell/mango.repo /etc/yum.repos.d/mango.repo &>> $LOGFILE
