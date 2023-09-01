@@ -35,22 +35,50 @@ yum install nodejs -y &>>$LOGFILE
 
 VALIDATE $? "Installing NodeJS"
 
-useradd roboshop
+useradd roboshop &>>$LOGFILE
 
-mkdir /app
+mkdir /app &>>$LOGFILE
 
-curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip
+curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>>$LOGFILE
 
-cd /app
+VALIDATE $? "downloading catalogue artifact"
 
-unzip /tmp/catalogue.zip
+cd /app &>>$LOGFILE
 
-npm install
+VALIDATE $? "Moving into app directory"
 
-cp /root/Devops_Learning/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
+unzip /tmp/catalogue.zip &>>$LOGFILE
 
-systemctl daemon-reload
+VALIDATE $? "unzipping catalogue"
 
-systemctl enable catalogue
+npm install &>>$LOGFILE
 
-systemctl start catalogue
+VALIDATE $? "Installing dependencies"
+ 
+cp /root/Devops_Learning/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service &>>$LOGFILE
+
+VALIDATE $? "copying catalogue.service"
+
+systemctl daemon-reload &>>$LOGFILE
+
+VALIDATE $? "daemon reload"
+
+systemctl enable catalogue &>>$LOGFILE
+
+VALIDATE $? "Enabling Catalogue"
+
+systemctl start catalogue &>>$LOGFILE
+
+VALIDATE $? "Starting Catalogue"
+
+cp /root/Devops_Learning/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo &>>$LOGFILE
+
+VALIDATE $? "Copying mongo repo"
+
+yum install mongodb-org-shell -y &>>$LOGFILE
+
+VALIDATE $? "Installing mongo client"
+
+mongo --host mongodb.rajus.cloud </app/schema/catalogue.js &>>$LOGFILE
+
+VALIDATE $? "loading catalogue data into mongodb"
