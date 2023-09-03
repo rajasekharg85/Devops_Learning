@@ -73,7 +73,7 @@ VALIDATE $? "Enabling Shipping"
 
 systemctl start shipping &>>$LOGFILE
 
-VALIDATE $? "Start Shipping"
+VALIDATE $? "Starting Shipping"
 
 yum install mysql -y &>>$LOGFILE
 
