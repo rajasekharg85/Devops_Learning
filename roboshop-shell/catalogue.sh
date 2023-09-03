@@ -37,6 +37,8 @@ VALIDATE $? "Installing NodeJS"
 
 useradd roboshop &>>$LOGFILE
 
+#Write a conditions to check directory already exist or not
+
 mkdir /app &>>$LOGFILE
 
 curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip &>>$LOGFILE
@@ -71,7 +73,7 @@ systemctl start catalogue &>>$LOGFILE
 
 VALIDATE $? "Starting Catalogue"
 
-cp /root//root/Devops_Learning/roboshop-shell/mango.repo /etc/yum.repos.d/mongo.repo &>>$LOGFILE
+cp /root/root/Devops_Learning/roboshop-shell/mango.repo /etc/yum.repos.d/mongo.repo &>>$LOGFILE
 
 VALIDATE $? "Copying mongo repo"
 
