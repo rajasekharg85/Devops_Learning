@@ -49,7 +49,7 @@ VALIDATE $? "Moving to app directory"
 
 unzip /tmp/shipping.zip &>>$LOGFILE
 
-VALIDATE $? "Unzipping shipping Artifacts"
+VALIDATE $? "Unzipping shipping"
 
 mvn clean package &>>$LOGFILE
 
@@ -77,7 +77,7 @@ VALIDATE $? "Start Shipping"
 
 yum install mysql -y &>>$LOGFILE
 
-VALIDATE $? "Installing MySqQL client"
+VALIDATE $? "Installing MySQL client"
 
 mysql -h mysql.rajus.cloud -uroot -pRoboShop@1 < /app/schema/shipping.sql &>>$LOGFILE
 
