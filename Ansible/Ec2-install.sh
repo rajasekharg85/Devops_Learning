@@ -17,7 +17,7 @@ do
     fi
     echo "Creating $i instance"
     IP_ADDRESS=$(aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE --security-group-ids $SECURITY_GROUP_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" | jq -r '.Instances[0].PrivateIpAddress')
-    echo "Create $i instance: $IP_ADDRESS"
+    echo "Created $i instance: $IP_ADDRESS"
 
     aws route53 change-resource-record-sets --hosted-zone-id Z06312703UF3MX5JLGU8P --change-batch '
     {
@@ -29,6 +29,6 @@ do
                             "TTL": 300,
                             "ResourceRecords": [{ "Value: "'$IP_ADDRESS'"}]
                         }}]
-    }
-    '
-done
+        }
+        '
+    done
