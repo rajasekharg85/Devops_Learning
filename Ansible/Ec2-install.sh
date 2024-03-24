@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NAMES=("mandodb" "redis" "mysql" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
+NAMES=("mangodb" "redis" "mysql" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
 INSTANCE_TYPE=""
 IMAGE_ID=ami-0f3c7d07486cad139
 SECURITY_GROUP_ID=sg-0ac489c6167a83372
