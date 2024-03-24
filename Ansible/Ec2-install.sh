@@ -8,7 +8,7 @@ SECURITY_GROUP_ID=sg-0ac489c6167a83372
 
 for i in "${NAMES[@]}"
 do
-    if [ [ $i == "mangodb" || $i == "mysql" ] ];
+    if [[ $i == "mangodb" || $i == "mysql" ]];
     then
         INSTANCE_TYPE="t3.medium"
     else
