@@ -2,8 +2,8 @@
   hosts: localhost
   vars:
     NAME: Raj-play
-  vars_files:
-  - variables.yaml
+  # vars_files:
+  # - variables.yaml
   vars_prompt:
   - name: NAME
     prompt: please enter Trainer name
@@ -17,4 +17,5 @@
 
 
 # First preference from command line
-# Second id task level
+# Second preference is task level
+# Third preference is vars_files
