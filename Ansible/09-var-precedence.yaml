@@ -1,7 +1,7 @@
 - name: testing variable precedence
   hosts: localhost
-  vars:
-    NAME: Raj-play
+  # vars:
+  #   NAME: Raj-play
   # vars_files:
   # - variables.yaml
   # vars_prompt:
@@ -20,3 +20,5 @@
 # Second preference is task level
 # Third preference is vars_files
 # fourth preference is from prompt
+# fifth preference is from play level
+# 
