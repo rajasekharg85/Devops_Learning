@@ -10,3 +10,8 @@
       ansible.builtin.yum:
         name: mangodb-org
         state: installed
+    - name: start and enable mangodb
+      ansible.builtin.service:
+        name: mangod
+        state: started
+        enabled: yes
