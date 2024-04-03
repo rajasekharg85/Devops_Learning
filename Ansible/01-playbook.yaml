@@ -1,8 +1,8 @@
 # Playbook
 - name: ping the node
-hosts: mondodb
+  hosts: mondodb
 # this is list of tasks/modules/collections
-tasks:
+  tasks:
 - name: pinging the server
-  # this is the map
+     # this is the map
   ansible.builtin.ping: 
