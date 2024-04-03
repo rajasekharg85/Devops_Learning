@@ -15,6 +15,7 @@
     ansible.builtin.debug:
       msg: "{{output.rc}}"
   - name: create user roboshop
+    become: yes # we need sudo access for this task only
     ansible.builtin.user:
       name: roboshop
     when: output.rc != 0
