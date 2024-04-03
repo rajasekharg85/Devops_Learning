@@ -1,2 +1,6 @@
 [mangodb]
 172.31.90.175
+
+[mangodb:vars]
+MANGO_USERNAME=mangodbadmin
+MANGO_DB=catagories

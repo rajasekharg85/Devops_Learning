@@ -1,0 +1,6 @@
+- name: variables from inventory
+  hosts: mangodb
+  tasks:
+  - name: print mangodb username
+    ansible.builtin.debug:
+      msg: "username is: {{MANGO_USERNAME}}"
