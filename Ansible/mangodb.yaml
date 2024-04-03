@@ -4,7 +4,7 @@
   tasks:
   - name: copy mongo repo to yum.repos.d
     ansible.builtin.copy:
-      src: mongodb.repo
+      src: mangodb.repo
       dest: /etc/yum.repos.d/mongo.repo
   - name: Install MongoDB
     ansible.builtin.yum:
