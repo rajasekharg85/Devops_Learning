@@ -5,6 +5,7 @@ INSTANCE_TYPE=""
 IMAGE_ID=ami-0f3c7d07486cad139
 SECURITY_GROUP_ID=sg-0ac489c6167a83372
 DOMAIN_NAME=rajus.cloud
+HOSTED_ZONE_ID=Z0153013VMDT5YYMVHI7
 #if mysql or mongodb instanse_type should be t3.medium. for all others it is t2.micro
 
 for i in $@
@@ -19,7 +20,7 @@ do
     IP_ADDRESS=$(aws ec2 run-instances --image-id $IMAGE_ID --instance-type $INSTANCE_TYPE --security-group-ids $SECURITY_GROUP_ID --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$i}]" | jq -r '.Instances[0].PrivateIpAddress')
     echo "Created $i instance: $IP_ADDRESS"
 
-    aws route53 change-resource-record-sets --hosted-zone-id Z06312703UF3MX5JLGU8P --change-batch '
+    aws route53 change-resource-record-sets --hosted-zone-id Z0153013VMDT5YYMVHI7 --change-batch '
     {
             "Changes": [{
             "Action": "CREATE",
