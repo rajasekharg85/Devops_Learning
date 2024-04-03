@@ -21,4 +21,5 @@
 # Third preference is vars_files
 # fourth preference is from prompt
 # fifth preference is from play level
-# 
+# sixth is inventory 
+# seventh is Roles
