@@ -1,5 +1,5 @@
 - name: variables at task level
-  hosts:
+  hosts: localhost
   vars:
   - money: "10000 RS"
     land: "100 hectors"
