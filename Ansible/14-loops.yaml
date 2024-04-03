@@ -1,5 +1,5 @@
 - name: install packages
-  hosts: localhost
+  hosts: mangodb
   become: yes
   tasks:
     - name: install package
