@@ -1,5 +1,5 @@
 [mangodb]
-72.31.94.244
+172.31.94.244
 
 [mangodb:vars]
 MANGO_USERNAME=mangodbadmin
