@@ -10,7 +10,11 @@
     private: false
   tasks:
   - name: variable at task level
-    vars: 
-      NAME: Raj-task
+#    vars: 
+#      NAME: Raj-task
     ansible.builtin.debug:
       msg: "Trainer name is: {{NAME}}"
+
+
+# First preference from command line
+# Second id task level
