@@ -4,3 +4,4 @@
 [mangodb:vars]
 MANGO_USERNAME=mangodbadmin
 MANGO_DB=catagories
+NAME=Raj

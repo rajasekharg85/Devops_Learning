@@ -1,0 +1,16 @@
+- name: testing variable precedence
+  hosts: localhost
+  vars:
+    NAME: Raj-play
+  vars_files:
+  - variables.yaml
+  vars_prompt:
+  - name: NAME
+    prompt: please enter Trainer name
+    private: false
+  tasks:
+  - name: variable at task level
+    vars: 
+      NAME: Raj-task
+    ansible.builtin.debug:
+      msg: "Trainer name is: {{NAME}}"
