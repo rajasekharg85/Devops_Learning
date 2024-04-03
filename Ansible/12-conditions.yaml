@@ -7,9 +7,8 @@
       ansible.builtin.debug:
         msg: "Hello {{NAME}}"
       when: NAME == "Devops"
-- name: check directory exist
-  hosts: localhost
-    tasks:
-    - name: check if test directory exist
-      ansible.builtin.stat:
-      
+# - name: check directory exist
+#   hosts: localhost
+#     tasks:
+#     - name: check if test directory exist
+#       ansible.builtin.stat:
