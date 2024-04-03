@@ -1,13 +1,13 @@
 #!/bin/bash
 
-NAMES=("mangodb" "redis" "mysql" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
+NAMES=$@
 INSTANCE_TYPE=""
 IMAGE_ID=ami-0f3c7d07486cad139
 SECURITY_GROUP_ID=sg-0ac489c6167a83372
 DOMAIN_NAME=rajus.cloud
 #if mysql or mongodb instanse_type should be t3.medium. for all others it is t2.micro
 
-for i in "${NAMES[@]}"
+for i in $@
 do
     if [[ $i == "mangodb" || $i == "mysql" ]];
     then
