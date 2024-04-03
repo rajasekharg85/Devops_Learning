@@ -4,10 +4,10 @@
     NAME: Raj-play
   # vars_files:
   # - variables.yaml
-  vars_prompt:
-  - name: NAME
-    prompt: please enter Trainer name
-    private: false
+  # vars_prompt:
+  # - name: NAME
+  #   prompt: please enter Trainer name
+  #   private: false
   tasks:
   - name: variable at task level
 #    vars: 
@@ -19,3 +19,4 @@
 # First preference from command line
 # Second preference is task level
 # Third preference is vars_files
+# fourth preference is from prompt
