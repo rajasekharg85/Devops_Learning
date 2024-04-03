@@ -1,0 +1,12 @@
+- name: Installl MangoDB component
+  hosts: mangodb
+  become: yes
+  tasks:
+    - name: copy mango repo to yum.repos.d
+      ansible.builtin.copy:
+        src: mangodb.repo
+        dest: /etc/yum.repos.d/mango.repo
+    - name: Install MangoDB
+      ansible.builtin.yum:
+        name: mangodb-org
+        state: installed

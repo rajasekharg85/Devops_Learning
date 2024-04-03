@@ -1,7 +1,8 @@
 [mangodb]
-172.31.94.244
+mangodb.rajus.cloud
 
-[mangodb:vars]
-MANGO_USERNAME=mangodbadmin
-MANGO_DB=catagories
-NAME=Raj
+[catalogue]
+catalogue.rajus.cloud
+
+[web]
+web.rajus.cloud
