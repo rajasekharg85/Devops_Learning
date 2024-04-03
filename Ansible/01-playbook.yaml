@@ -5,4 +5,4 @@ hosts: mondodb
 tasks:
 - name: pinging the server
   # this is the map
-  ansible.builtin.ping:
+  ansible.builtin.ping: 
