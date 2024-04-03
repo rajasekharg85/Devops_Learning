@@ -9,3 +9,5 @@
       loop:
         - nginx
         - postfix
+        - mailx
+        - cyrus-sasl-plain
