@@ -5,7 +5,7 @@ INSTANCE_TYPE=""
 IMAGE_ID=ami-0f3c7d07486cad139
 SECURITY_GROUP_ID=sg-0ac489c6167a83372
 DOMAIN_NAME=rajus.cloud
-HOSTED_ZONE_ID=Z0153013VMDT5YYMVHI7
+HOSTED_ZONE_ID=Z018076017L3BD7L887UU
 #if mysql or mongodb instanse_type should be t3.medium. for all others it is t2.micro
 
 # if mysql or mongodb instance_type should be t3.medium , for all others it is t2.micro
