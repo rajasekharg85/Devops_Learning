@@ -40,5 +40,5 @@
   
   - name: download catalogue artifacts
     ansible.builtin.get_url:
-    url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip 
-    dest: /app
+      url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip 
+      dest: /app
