@@ -1,8 +1,8 @@
 [mongodb]
-mongodb.rajus.cloud
+172.31.93.103
 
 [catalogue]
-catalogue.rajus.cloud
+172.31.84.230
 
 [web]
-web.rajus.cloud
+172.31.88.78
