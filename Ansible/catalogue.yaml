@@ -42,7 +42,8 @@
     ansible.builtin.get_url:
       url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip 
       dest: /app
+
   - name: Extract catalogue into /app
     ansible.builtin.unarchive:
-    src: /app/catalogue.zip
-    dest: /app
+      src: /app/catalogue.zip
+      dest: /app
