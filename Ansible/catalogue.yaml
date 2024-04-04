@@ -74,8 +74,7 @@
       state: installed  
   
   - name: load catalogue data
-    ansible.builtin.command: mongo --host 172.31.93.103 </app/schema/catalogue.js
-      remote_src: yes
+    ansible.builtin.command: mongo --host 172.31.93.103 < /app/schema/catalogue.js
   
   - name: restart catalogue
     ansible.builtin.service:
