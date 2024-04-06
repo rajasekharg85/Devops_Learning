@@ -7,7 +7,7 @@
 
     - name: copy mysql repo
       ansible.builtin.copy:
-        src:mysql.repo
+        src: mysql.repo
         dest: /etc/yum.repos.d/mysql.repo
 
     - name: Install MySQL community server
@@ -22,4 +22,4 @@
     
     - name: setup mysql root password
       ansible.builtin.command: mysql_secure_installation --set-root-pass RoboShop@1
-      
+
