@@ -1,0 +1,5 @@
+CATALOGUE_HOST: catalogue.rajus.cloud
+USER_HOST: user.rajus.cloud
+SHIPPING_HOST: shipping.rajus.cloud
+CART_HOST: cart.rajus.cloud
+PAYMENT_HOST: payment.rajus.cloud
