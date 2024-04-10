@@ -27,14 +27,14 @@
     path: /app
     state: directory
   
-- name: download catalogue artifacts
+- name: "download {{component}} artifacts"
   ansible.builtin.get_url:
-    url: https://roboshop-builds.s3.amazonaws.com/catalogue.zip 
+    url: "https://roboshop-builds.s3.amazonaws.com/{{component}}.zip"
     dest: /tmp
 
-- name: Extract catalogue artifact
+- name: Extract {{component}} artifact
   ansible.builtin.unarchive:
-    src: /tmp/catalogue.zip
+    src: /tmp/{{component}}.zip
     dest: /app
     remote_src: yes
   
