@@ -1,0 +1,14 @@
+- name: copy {{component}} service 
+    ansible.builtin.copy:
+      src: catalogue.service
+      dest: /etc/systemd/system/{{component}}.service
+
+- name: deamon reload
+  ansible.builtin.systemd:
+    daemon_reload: true
+    state: restarted
+
+- name: restart {{component}}
+  ansible.builtin.service:
+    name: catalogue
+    state: restarted
