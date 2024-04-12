@@ -27,3 +27,6 @@ payment.rajus.cloud
 
 [rabbitmq]
 rabbitmq.rajus.cloud
+
+[payment]
+payment.rajus.cloud
