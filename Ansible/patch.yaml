@@ -15,7 +15,7 @@
 
   - name: upgrade all packages on the server
     ansible.builtin.yum: 
-    when: app_process_check.stdout == "process_not_running" and ansible_distribution == 'CentOS' or ansible_distribution == 'Redhar Enterprise linux'
+    # when: app_process_check.stdout == "process_not_running" and ansible_distribution == 'CentOS' or ansible_distribution == 'Redhar Enterprise linux'
     register: yum_update
   
   - name: check if reboot required after kernel yum_update
