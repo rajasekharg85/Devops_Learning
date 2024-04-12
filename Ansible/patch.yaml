@@ -1,4 +1,4 @@
-- hosts: dev-redhat
+- hosts: centos
   become: yes
   serial: 2
 
@@ -14,9 +14,7 @@
     when: app_process_check.stdout == "process_running"
 
   - name: upgrade all packages on the server
-    yum: 
-      name: "kernel"
-      state: latest
+    ansible.builtin.yum: 
     when: app_process_check.stdout == "process_not_running" and ansible_distribution == 'CentOS' or ansible_distribution == 'Redhar Enterprise linux'
     register: yum_update
   
