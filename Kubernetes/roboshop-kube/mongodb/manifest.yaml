@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: mongodb
-        image: joindevops/mongodb:1.0.0
+        image: rajasekharg85/mongodb:1.0.0
 ---
 apiVersion: v1
 kind: Service
