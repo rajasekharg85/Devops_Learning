@@ -144,7 +144,7 @@ spec:
             path: nginx.conf
       containers:
       - name: web
-        image: rajasekharg85/web:1.0.0
+        image: joindevops/web:1.0.0
         resources:
           requests:
             cpu: "50m"
