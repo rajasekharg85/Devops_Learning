@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: joindevops/mysql:1.0.0
+        image: rajasekharg85/mysql:1.0.0
         envFrom:
         - configMapRef:
             name: mysql
